@@ -1,0 +1,12 @@
+# Node / Parcel
+node_modules/
+.parcel-cache/
+dist/
+
+# Sistemas
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
