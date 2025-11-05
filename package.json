@@ -1,12 +1,21 @@
 {
   "name": "camino-ingles",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Blog del Camino de Santiago Inglés.",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.1",
+    "parcel": "latest",
+    "sass": "^1.93.3"
+  },
+  "browserslist": [
+    "defaults",
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

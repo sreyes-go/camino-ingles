@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+body {
+  margin: 0;
+  font-family: v.$font-base;
+  font-size: v.$font-size-base;
+  color: v.$color-text;
+  line-height: 1.5;
+}
+
+header, main, footer {
+  max-width: v.$max-width;
+  margin-inline: auto;
+  padding: v.$spacing-unit;
+}
+
+h1, h2 {
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+a {
+  color: v.$color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 48rem) {
+  header, main, footer {
+    padding: calc(v.$spacing-unit * 2);
+  }
+}
