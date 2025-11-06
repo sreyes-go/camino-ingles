@@ -9,10 +9,8 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.1",
-    "autoprefixer": "^10.4.21",
     "parcel": "latest",
-    "postcss": "^8.5.6",
-    "sass": "^1.93.3"
+    "sass": "latest"
   },
   "browserslist": [
     "defaults",
