@@ -1,3 +1,4 @@
-// Importar parciales
-@use 'variables';
+@forward 'variables';
+@use 'variables' as v;
 @use 'layout';
+@use 'fonts';
