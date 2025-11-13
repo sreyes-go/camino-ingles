@@ -51,6 +51,10 @@ body {
   background: v.$color-nav-bg;
 }
 
+.header .header-gradient {
+    background: linear-gradient(to bottom, rgba(101, 74, 43, 0.3), transparent);
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -515,6 +519,158 @@ main .container {
     }
   }
 }
+
+
+/*---------------------------------- 
+DET1 · LAYOUT DEL ARTÍCULO 
+----------------------------------*/
+
+/* Contenedor: 800px de contenido + 1rem izq + 1rem dcha */
+.article-container {
+  max-width: calc(800px + 2rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.article-hero {
+  padding-top: 2rem;
+}
+
+/* Titulares del artículo */
+.article-container h1,
+.article-container h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.article-container h2 {
+  color: v.$color-secondary;
+  padding-bottom: 1rem;
+}
+
+.final-text,
+.final-figure {
+  padding-bottom: 2rem;
+}
+
+/* Meta horizontal con separadores | entre items */
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .25rem;
+
+  /* Inserta | delante del 2º y 3º elemento (y sucesivos) */
+  > div + div::before {
+    content: "|";
+    margin-inline: .5rem;
+    opacity: .7;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Medios: imágenes full-width y figcaptions a la izquierda */
+.article-container figure {
+  margin: 1.25rem 0;
+}
+
+.article-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-container figcaption {
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-top: .35rem;
+}
+
+/* Cita con “estilo de h3” e itálica, autor a la derecha en línea nueva */
+.article-container blockquote {
+  font-style: italic;
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem); /* tamaño aproximado de h3 */
+  line-height: 1.45;
+  color: v.$color-tertiary;
+  margin: 1.25rem 0 .75rem;
+  padding-block: 2rem;
+}
+
+.article-container blockquote cite {
+  display: block;
+  text-align: center;
+  font-style: normal; /* el autor no en cursiva */
+  font-size: 1.3rem;
+  margin-top: .5rem;
+  opacity: .85;
+}
+
+/* Vídeo: figure con ancho 800px centrado; iframe responsivo 16:9 */
+figure.video {
+  max-width: 800px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+figure.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* calcula la altura automáticamente */
+  height: auto;         /* por compatibilidad; algunos UAs lo ignoran en iframe */
+  border: 0;
+  display: block;
+}
+
+/* Footer del autor:
+   - Sin cambiar HTML: usamos GRID para alinear la imagen a la izquierda
+     y los dos <p> en columna a la derecha. */
+#author {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: .25rem;
+  padding-block: 1rem;
+  margin-bottom: 3rem;
+
+
+  /* Bordes solo superior e inferior */
+  border-block: 1px solid v.$color-nav-bg;
+  border-inline: 0;
+}
+
+#author img {
+  grid-row: 1 / span 2;     /* la imagen ocupa la altura de ambos <p> */
+  border-radius: 100px;
+  display: block;
+}
+
+#author p {
+  margin: 0;
+  color: v.$color-tertiary;
+}
+
+.footer-info {
+  margin-top: 2.7rem;
+  display: block;
+  align-items: center;
+}
+
+/* Accesibilidad y pequeños refinamientos */
+.article-container a:focus-visible {
+  outline: 2px solid v.$color-secondary;
+  outline-offset: 2px;
+}
+
 
 /* ---------------------
    Vista móvil (≤ $bp-mobile)
