@@ -88,6 +88,8 @@ body {
 .nav-link.current {
   color: v.$color-secondary;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 
   &:hover,
   &:focus {
@@ -163,8 +165,8 @@ main .container {
 .hero img {
   display: block;
   width: 100vw;
-  height: auto;          /* << fijo a 70vh en todos los tamaños */
-  object-fit: cover;     /* recorte para mantener proporción */
+  height: auto;          
+  object-fit: cover;   
   object-position: center;
   margin-top: 0;
   padding: 0 0 2rem 0;
@@ -311,6 +313,30 @@ main .container {
   cursor: not-allowed;
 }
 
+
+/* ---------------------
+   Sección 3 - Resources
+---------------------- */
+
+.resources {
+  max-width: 640px;
+  margin-inline: auto;
+  padding-block: v.$spacing-unit * 3;
+
+  h2 {
+    padding-top: 2rem;
+    margin: .5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+  }
+}
+
 /* ---------------------
    BOTONES (enlaces .btn)
 ---------------------- */
@@ -392,9 +418,9 @@ main .container {
   }
 }
 
-/* ---------------------
-   HERO CATEGORIES
---------------------- */
+/* ---------------------------------
+   HERO CATEGORIES (categorias.html)
+--------------------------------- */
 .hero-categories {
   margin-top: 0;
   padding: 0;
@@ -435,9 +461,9 @@ main .container {
     }
   }
 }
-/* ---------------------
-   CATEGORIES
---------------------- */
+/* ----------------------------
+   CATEGORIES (categorias.html)
+---------------------------- */
 .categories {
   padding-block: v.$spacing-unit * 3;
 
@@ -521,9 +547,9 @@ main .container {
 }
 
 
-/*---------------------------------- 
-DET1 · LAYOUT DEL ARTÍCULO 
-----------------------------------*/
+/*--------------------------------------------- 
+    LAYOUT DEL ARTÍCULO (det1.html + det2.html)
+-------------------------------------------- */
 
 /* Contenedor: 800px de contenido + 1rem izq + 1rem dcha */
 .article-container {
@@ -546,6 +572,16 @@ DET1 · LAYOUT DEL ARTÍCULO
 .article-container h2 {
   color: v.$color-secondary;
   padding-bottom: 1rem;
+}
+
+.article-container h3 {
+  font-weight: 700;
+  color: v.$color-route;
+}
+
+.article-container .lugar {
+  font-weight: 700;
+  color: v.$color-tertiary;
 }
 
 .final-text,
@@ -671,6 +707,212 @@ figure.video iframe {
   outline-offset: 2px;
 }
 
+/* ----------------------------
+   SOURCES SECTION (links.html)
+---------------------------- */
+
+.sources {
+  display: flex;
+  align-items: center;      
+  gap: clamp(1rem, 3vw, 2rem);
+  padding-block: 2rem;
+  padding-inline: 1rem;
+
+  /* 50/50 */
+  .sources-text,
+  .sources-logos {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  /* Sources text */
+  .sources-text {
+    text-align: left;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25em;
+      color: v.$color-primary;
+      text-align: left;     
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: v.$color-tertiary;
+      margin-top: 0;
+      margin-bottom: calc(v.$spacing-unit);
+      text-align: left;    
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: v.$color-text;
+      margin-bottom: calc(v.$spacing-unit);
+      max-width: 60ch;
+    }
+
+    cite {
+      font-style: normal;
+      font-weight: 700;
+      color: v.$color-tertiary;
+    }
+  }
+
+  /* Sources logos */
+  .sources-logos {
+    display: flex;
+    flex-direction: column;      /* uno encima del otro */
+    justify-content: center;     /* centrado vertical dentro de su 50% */
+    align-items: center;         /* centrado horizontal del bloque */
+    gap: clamp(1rem, 3vw, 2rem);
+
+    .source-link {
+      display: inline-block;
+
+      &:focus-visible img {
+        outline: 3px solid v.$color-tertiary;
+        outline-offset: 4px;
+      }
+    }
+
+    .source-logo {
+      height: 100px;  /* requerido */
+      width: auto;    /* requerido */
+      display: block;
+    }
+  }
+}
+
+/* --------------------
+   GALLERY (links.html)
+-------------------- */
+
+.gallery {
+
+  padding-block: 2rem;
+  /* títulos centrados */
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25em;
+    color: v.$color-primary;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.25rem;
+    color: v.$color-tertiary;
+    margin-top: 0;
+    margin-bottom: calc(v.$spacing-unit);
+    text-align: center;
+  }
+
+  /* ===== Grid centrado, gap fijo ===== */
+  .image-grid {
+    /* alto/ratio determinan el ancho exacto de cada tarjeta */
+    --card-h: 240px;
+    --card-w: calc(var(--card-h) * 4 / 3); /* 333.333px */
+
+    display: grid;
+    gap: 1rem;                     /* hueco fijo */
+    justify-content: center;       /* centra el bloque de columnas */
+    list-style: none;
+    padding-inline: v.$spacing-unit;
+    padding-block: 3rem;
+    margin: 0 auto;
+    max-width: v.$max-width;
+    box-sizing: border-box;
+  }
+
+  /* 3-2-1 columnas con tracks de ancho fijo (siempre centradas) */
+  @media (min-width: 1025px) {
+    .image-grid { grid-template-columns: repeat(3, var(--card-w)); }
+  }
+  @media (max-width: 1024px) and (min-width: 640px) {
+    .image-grid { grid-template-columns: repeat(2, var(--card-w)); }
+  }
+  @media (max-width: 639px) {
+    .image-grid { grid-template-columns: var(--card-w); }
+  }
+
+  /* tarjeta (recorta el zoom y mantiene el radio) */
+  .image-card {
+    margin: 0;
+    inline-size: var(--card-w);
+    overflow: hidden;              /* imprescindible para recortar el scale */
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .image-link {
+    display: block;
+    text-decoration: none;
+
+    /* foco visible accesible en el enlace */
+    &:focus-visible {
+      outline: 3px solid v.$color-tertiary;
+      outline-offset: 4px;
+    }
+  }
+
+  /* ===== Imagen: 250px alto + 4:3 sin deformar ===== */
+  .image {
+    display: block;
+    height: var(--card-h);
+    aspect-ratio: 4 / 3;           /* calcula el ancho ≈ 333px */
+    width: auto;                   /* no forzar 100%, respeta el ratio */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    /* animación hover/focus */
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 1s ease-in-out;
+    will-change: transform;
+  }
+
+  .image-card:hover .image,
+  .image-link:hover .image,
+  .image-link:focus-visible .image {
+    transform: scale(1.15);
+  }
+}
+.video-gallery {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+
+  .source-logo {
+    height: 100px;
+    width: auto;
+  }
+
+ .video-item {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center; /* centra cada vídeo en su línea */
+  }
+
+  .video {
+    height: 300px;
+    aspect-ratio: 4 / 3;
+    width: auto;
+    border-radius: 10px;
+    max-width: 100%;      /* 💡 evita desbordes horizontales */
+    object-fit: cover;
+  }
+
+  /* ========== RESPONSIVE ========== */
+ 
+
+  @media (max-width: 640px) {
+    .video {
+      height: auto;
+      width: auto;
+      aspect-ratio: 4 / 3; /* opcional: formato más panorámico en móvil */
+      border-radius: 8px;
+    }
+  }
+}
 
 /* ---------------------
    Vista móvil (≤ $bp-mobile)
@@ -774,6 +1016,7 @@ figure.video iframe {
         }
       }
     }
+    
   }
 
   /* CATEGORIES */
@@ -830,7 +1073,31 @@ figure.video iframe {
       }
     }
   }
+  .sources {
+    flex-direction: column;
+    align-items: stretch;
+
+    .sources-text,
+    .sources-logos {
+      flex-basis: auto;
+    }
+
+    .sources-text {
+      h2,
+      h3,
+      p {
+        text-align: center;
+        max-width: 100ch;
+      }
+    }
+
+    .sources-logos {
+      margin-top: 1rem;
+    }
+  }
 }
+
+
 
 /* --------------------------
    Vista tablet (601px–960px)
