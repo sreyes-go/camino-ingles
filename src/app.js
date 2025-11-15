@@ -1,3 +1,24 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({
+  duration: 1500,
+  once: true      
+});
+
+import Typed from "typed.js";
+
+const heroTitle = document.querySelector("#hero-title");
+if (heroTitle) {
+  new Typed(heroTitle, {
+    strings: ["Aquí comienza tu camino"],
+    typeSpeed: 80,
+    loop: false,
+    showCursor: false
+  });
+}
+
+
 // Carrusel "features": desplazamiento con flechas 
 (function () {
   'use strict';
