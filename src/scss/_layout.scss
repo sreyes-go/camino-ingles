@@ -878,11 +878,19 @@ figure.video iframe {
   }
 }
 .video-gallery {
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25em;
+    color: v.$color-primary;
+    text-align: center;
+  }
+
   padding-top: 1rem;
   padding-bottom: 3rem;
 
   .source-logo {
-    height: 100px;
+    height: 80px;
     width: auto;
   }
 
