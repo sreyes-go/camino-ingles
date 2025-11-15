@@ -1,13 +1,13 @@
-// 🎨 Paleta de colores (RGB → hex)
+//  Paleta de colores (RGB → hex)
 $color-primary:   #210D08; // rgb(33, 13, 8)
-$color-secondary: #9E6039; // rgb(158, 96, 57) (también para barra de footer)
-$color-tertiary:  #5D3926; // rgb(93, 57, 38) (texto nav)
+$color-secondary: #9E6039; // rgb(158, 96, 57) 
+$color-tertiary:  #5D3926; // rgb(93, 57, 38) 
 $color-nav-bg:    #E0D1CA; // rgb(224, 209, 202)
 $color-body-bg:   #FFFFFF; // blanco
 $color-text:      #210D08;
 $color-route:     #B19181;
 
-// ✍️ Tipografía
+// Tipografía
 $font-base: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-size-base: 1rem; // 16px
 
@@ -15,9 +15,9 @@ $font-size-base: 1rem; // 16px
 $spacing-unit: 1rem;
 $max-width: 80rem; // ~1280px: tamaño para web grande
 
-/* Breakpoints */
+// Breakpoints 
 $bp-mobile: 640px;  // móviles: ≤ 640px
 $bp-tablet: 960px;  // tablets: 641–960px
 
-/* Tipografía móvil (escala proporcional) */
+// Tipografía móvil (escala proporcional) */
 $font-size-base-mobile: 0.9rem; 
