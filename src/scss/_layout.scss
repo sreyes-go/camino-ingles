@@ -320,7 +320,7 @@ main .container {
 
 .resources {
   max-width: 640px;
-  margin-inline: auto;
+  margin-inline: 1rem;
   padding-block: v.$spacing-unit * 3;
 
   h2 {
@@ -329,9 +329,10 @@ main .container {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     justify-content: center;
+    text-align: center;
     display: flex;
     margin: 0;
   }
