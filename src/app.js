@@ -1,4 +1,4 @@
-// ===== Carrusel "features": desplazamiento con flechas =====
+// Carrusel "features": desplazamiento con flechas 
 (function () {
   'use strict';
 
@@ -8,7 +8,6 @@
 
   if (!list || !prev || !next) return;
 
-  // Paso = ancho de una card + gap del contenedor
   function getStep() {
     const firstCard = list.querySelector('.feature-card');
     if (!firstCard) return 0;
@@ -20,7 +19,7 @@
     return width + gap;
   }
 
-  // Desplaza una "card" a izquierda/derecha
+  // Desplaza "card" a izquierda/derecha
   function scrollByStep(direction) {
     const step = getStep() || 300;
     list.scrollBy({ left: direction * step, behavior: 'smooth' });
