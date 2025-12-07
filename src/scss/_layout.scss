@@ -114,7 +114,6 @@ h1 {
 
 h2{
   font-size: 1.3rem;
-  padding-top: 1rem;
   letter-spacing: .2rem;
 }
 
@@ -180,6 +179,12 @@ main .container {
   max-width: min(v.$max-width, 70ch);
 }
 
+.arrow-clip {
+  width: auto;        
+  height: 5rem;
+  clip-path: url(#arrow-clip-path);
+}
+
 /* ---------------------------------
    Sección 2 — Carrusel (index.html)
 --------------------------------- */
@@ -203,7 +208,6 @@ main .container {
   margin-bottom: v.$spacing-unit;
 }
 .features-header h2 {
-  margin-bottom: 3rem;
   color: v.$color-tertiary;
 }
 
@@ -946,6 +950,12 @@ figure.video iframe {
     padding: .25rem .5rem;
   }
 
+  .arrow-clip {
+  width: auto;        
+  height: 3rem;
+  clip-path: url(#arrow-clip-path);
+  }
+
   /* 5) Carrusel: 1 tarjeta visible por pantalla, scroll/flechas dentro del container */
   .features-list {
     gap: 12px;
@@ -1106,6 +1116,12 @@ figure.video iframe {
    Vista tablet (601px–960px)
 -------------------------- */
 @media (min-width: calc(v.$bp-mobile + 1px)) and (max-width: v.$bp-tablet) {
+
+  .arrow-clip {
+  width: auto;        
+  height: 4rem;
+  clip-path: url(#arrow-clip-path);
+  }
 
   /* Carrusel con 2 tarjetas visibles y separación fija */
   .features-list {
