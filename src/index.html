@@ -34,7 +34,16 @@
     <div class="container">
       <section class="hero">
         <a class="hero-link" href="./det1.html" aria-label="Ir a la página de detalle 1">
-          <img src="./images/Index-Home.jpg" alt="Torre de Hércules al atardecer, A Coruña">
+          <img
+            srcset="
+              ./images/Index-Home.jpg?as=webp&width=480 480w,
+              ./images/Index-Home.jpg?as=webp&width=960 960w,
+              ./images/Index-Home.jpg?as=webp&width=1440 1440w
+            "
+            sizes="100vw"
+            src="./images/Index-Home.jpg?as=webp&width=960"
+            alt="Torre de Hércules al atardecer, A Coruña"
+          >
         </a>
         <h1 id="hero-title"></h1>
         <p>Conoce todos los secretos que te llevarán a vivir una experiencia única recorriendo las etapas del Camino de Santiago Inglés.</p>
@@ -50,59 +59,89 @@
             <div class="features-track">
                 <button class="carousel-prev" type="button" aria-label="Anterior" aria-controls="features-list" disabled>◀</button>
                 <ul class="features-list" id="features-list" aria-live="polite" data-carousel="true">
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="./det1.html" aria-label="Información general, ir a Detalle 1">
-                    <figure>
-                        <img src="./images/Info-gal.jpg" alt="Vista de la Catedral de Santiago" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/Info-gal.jpg?as=webp&width=400"
+                          alt="Vista de la Catedral de Santiago"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>Info</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
 
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="./det2.html" aria-label="Etapas, ir a Detalle 2">
-                    <figure>
-                        <img src="./images/Etapas-gal.jpg" alt="Señalización del Camino" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/Etapas-gal.jpg?as=webp&width=400"
+                          alt="Señalización del Camino"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>Etapas</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
 
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="#" aria-label="Alojamientos, ir a Detalle 3">
-                    <figure>
-                        <img src="./images/Hostel-gal.jpg" alt="Casas de un pueblo del Camino de Santiago al anochecer" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/Hostel-gal.jpg?as=webp&width=400"
+                          alt="Casas de un pueblo del Camino de Santiago al anochecer"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>Alojamientos</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
 
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="#" aria-label="Gastronomía, ir a Detalle 4">
-                    <figure>
-                        <img src="./images/Gastronomia-gal.jpg" alt="Detalle de plato de pulpo a feira" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/Gastronomia-gal.jpg?as=webp&width=400"
+                          alt="Detalle de plato de pulpo a feira"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>Gastronomía</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
 
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="#" aria-label="No te puedes perder, ir a Detalle 5">
-                    <figure>
-                        <img src="./images/No-te-puedes-perder-gal.jpg" alt="Vista de la Iglesia de San Francisco de Betanzos ubicada en Galicia, España" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/No-te-puedes-perder-gal.jpg?as=webp&width=400"
+                          alt="Vista de la Iglesia de San Francisco de Betanzos ubicada en Galicia, España"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>No te puedes perder</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
 
-                <li class="feature-card">
+                  <li class="feature-card">
                     <a class="feature-link" href="#" aria-label="Consejos, ir a Detalle 6">
-                    <figure>
-                        <img src="./images/Consejos-gal.jpg" alt="Detalle de calzado de un peregrino caminando" width="400" height="300">
+                      <figure>
+                        <img
+                          src="./images/Consejos-gal.jpg?as=webp&width=400"
+                          alt="Detalle de calzado de un peregrino caminando"
+                          width="400"
+                          height="300"
+                        >
                         <figcaption>Consejos</figcaption>
-                    </figure>
+                      </figure>
                     </a>
-                </li>
+                  </li>
                 </ul>
                 <button class="carousel-next" type="button" aria-label="Siguiente" aria-controls="features-list" disabled>▶</button>
                 <p>

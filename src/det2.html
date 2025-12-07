@@ -50,16 +50,41 @@
             </header>
 
             <figure>
-                <img src="./images/etapas.dt2.jpg" alt="Señalización del Camino, dirección y km restantes.">
-                <figcaption>
-                    Señal que indica el Km 103 del Camino Inglés a Santiago | 
-                    <cite>
-                        <a href="https://hotelbarreiro.com/wp-content/uploads/2023/02/Camino-de-Santiago.jpg" 
-                            target="_blank" rel="noopener noreferrer">
-                            Hotelbarreiro.com
-                        </a>
-                    </cite>
-                </figcaption>
+              <picture>
+                <!-- Versión móvil: recorte vertical -->
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    ./images/etapas-det2-mobile.jpg?as=webp&width=640 640w,
+                    ./images/etapas-det2-mobile.jpg?as=webp&width=480 480w"
+                  type="image/webp">
+
+                <!-- Tablet + escritorio: imagen horizontal -->
+                <source
+                  media="(min-width: 641px)"
+                  srcset="
+                    ./images/etapas-det2.jpg?as=webp&width=1200 1200w,
+                    ./images/etapas-det2.jpg?as=webp&width=960 960w"
+                  type="image/webp">
+
+                <!-- Fallback mínimo (también WebP) -->
+                <img
+                  src="./images/etapas-det2.jpg?as=webp&width=960"
+                  alt="Señalización del Camino, dirección y km restantes."
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 640px) 100vw, 800px">
+              </picture>
+
+              <figcaption>
+                Señal que indica el Km 103 del Camino Inglés a Santiago |
+                <cite>
+                  <a href="https://hotelbarreiro.com/wp-content/uploads/2023/02/Camino-de-Santiago.jpg" 
+                     target="_blank" rel="noopener noreferrer">
+                    Hotelbarreiro.com
+                  </a>
+                </cite>
+              </figcaption>
             </figure>
 
             <p class="final-text">
@@ -82,7 +107,16 @@
             </p>
 
             <figure class="final-figure">
-                <img src="./images/senal-det2.jpg" alt="Concha de Santiago tallada en piedra">
+                <img
+                    src="./images/senal-det2.jpg?as=webp&width=960"
+                    srcset="
+                    ./images/senal-det2.jpg?as=webp&width=640 640w,
+                    ./images/senal-det2.jpg?as=webp&width=960 960w,
+                    ./images/senal-det2.jpg?as=webp&width=1200 1200w"
+                    sizes="(max-width: 640px) 100vw, 800px"
+                    alt="Concha de Santiago tallada en piedra"
+                    loading="lazy"
+                    decoding="async">
                 <figcaption>
                     Concha de Santiago tallada en piedra | 
                     <cite>
@@ -100,7 +134,16 @@
             </p>
 
             <figure class="final-figure">
-                <img src="./images/recorrido-camino-ingles-det2.jpg" alt="Gráfico que muestra el perfil del recorrido del Camino de Santiago Inglés">
+                <img
+                    src="./images/recorrido-camino-ingles-det2.jpg?as=webp&width=960"
+                    srcset="
+                    ./images/recorrido-camino-ingles-det2.jpg?as=webp&width=640 640w,
+                    ./images/recorrido-camino-ingles-det2.jpg?as=webp&width=960 960w,
+                    ./images/recorrido-camino-ingles-det2.jpg?as=webp&width=1200 1200w"
+                    sizes="(max-width: 640px) 100vw, 800px"
+                    alt="Gráfico que muestra el perfil del recorrido del Camino de Santiago Inglés"
+                    loading="lazy"
+                    decoding="async">
                 <figcaption>
                     Perfil del recorrido del Camino de Santiago Inglés | 
                     <cite>

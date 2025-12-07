@@ -9,7 +9,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.1",
     "parcel": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "sharp": "^0.33.5"
   },
   "browserslist": [
     "> 0.5%",

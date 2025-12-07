@@ -52,11 +52,36 @@
             </header>
 
             <figure>
-                <img src="./images/Info-det1.jpg" alt="Catedral de Santiago">
+                <picture>
+                    <!-- Versión móvil: recorte vertical -->
+                    <source
+                        media="(max-width: 640px)"
+                        srcset="
+                            ./images/Info-det1-mobile.jpg?as=webp&width=640 640w,
+                            ./images/Info-det1-mobile.jpg?as=webp&width=480 480w"
+                        type="image/webp">
+
+                    <!-- Tablet + escritorio: versión horizontal actual -->
+                    <source
+                        media="(min-width: 641px)"
+                        srcset="
+                            ./images/Info-det1.jpg?as=webp&width=1200 1200w,
+                            ./images/Info-det1.jpg?as=webp&width=960 960w"
+                        type="image/webp">
+
+                    <!-- Fallback y tamaño por defecto -->
+                    <img
+                        src="./images/Info-det1.jpg?width=960"
+                        alt="Catedral de Santiago"
+                        loading="lazy"
+                        decoding="async"
+                        sizes="(max-width: 640px) 100vw, 800px">
+                </picture>
+
                 <figcaption>
-                    Catedral de Santiago | 
+                    Catedral de Santiago |
                     <cite>
-                        <a href="https://images.ecestaticos.com/kuaolah7lzv8g02ekhz0tA9cfLI=/0x0:1885x1414/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F2c7%2Fb69%2Fb93%2F2c7b69b935984d0583122500744de967.jpg" 
+                        <a href="https://images.ecestaticos.com/kuaolah7lzv8g02ekhz0tA9cfLI=/0x0:1885x1414/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F2c7%2Fb69%2Fb93%2F2c7b69b935984d0583122500744de967.jpg"
                             target="_blank" rel="noopener noreferrer">
                             El Confidencial
                         </a>
@@ -93,7 +118,17 @@
             </p>
 
             <figure class="final-figure">
-                <img src="./images/campanario-det1.jpg" alt="Campanario de la Iglesia de Santo André, Cabanas">
+                <img
+                srcset="
+                    ./images/campanario-det1.jpg?as=webp&width=480 480w,
+                    ./images/campanario-det1.jpg?as=webp&width=960 960w,
+                    ./images/campanario-det1.jpg?as=webp&width=1440 1440w
+                "
+                sizes="(max-width: 640px) 100vw, 800px"
+                src="./images/campanario-det1.jpg?as=webp&width=960"
+                alt="Campanario de la Iglesia de Santo André, Cabanas"
+                loading="lazy"
+                decoding="async">
                 <figcaption>
                     Campanario de la Iglesia de Santo André, Cabanas | 
                     <cite>
@@ -112,7 +147,17 @@
             </p>
 
             <figure>
-                <img src="./images/bosque-encantado-det1.jpg" alt="Bosque Encantado, Sigüeiro">
+                <img
+                srcset="
+                    ./images/bosque-encantado-det1.jpg?as=webp&width=480 480w,
+                    ./images/bosque-encantado-det1.jpg?as=webp&width=960 960w,
+                    ./images/bosque-encantado-det1.jpg?as=webp&width=1440 1440w
+                "
+                sizes="(max-width: 640px) 100vw, 800px"
+                src="./images/bosque-encantado-det1.jpg?as=webp&width=960"
+                alt="Bosque Encantado, Sigüeiro"
+                loading="lazy"
+                decoding="async">
                 <figcaption>
                     Bosque Encantado, Sigüeiro | 
                     <cite>
