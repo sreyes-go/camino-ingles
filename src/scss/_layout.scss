@@ -180,11 +180,23 @@ main .container {
 }
 
 .arrow-clip {
-  width: auto;
-  height: 5rem;
   clip-path: url(#arrow-clip-path);
 }
 
+img.arrow-clip {
+  width: 85px;
+  height: 50px;
+  animation: blink 700ms ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* ---------------------------------
    Sección 2 — Carrusel (index.html)
@@ -207,6 +219,8 @@ main .container {
 .features-header {
   text-align: center;
   margin-bottom: v.$spacing-unit;
+  display: grid;
+  justify-items: center;
 }
 .features-header h2 {
   color: v.$color-tertiary;
