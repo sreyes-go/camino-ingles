@@ -59,6 +59,7 @@
                         srcset="
                             ./images/Info-det1-mobile.jpg?as=webp&width=640 640w,
                             ./images/Info-det1-mobile.jpg?as=webp&width=480 480w"
+                            sizes="100vw"
                         type="image/webp">
 
                     <!-- Tablet + escritorio: versión horizontal actual -->
@@ -67,6 +68,7 @@
                         srcset="
                             ./images/Info-det1.jpg?as=webp&width=1200 1200w,
                             ./images/Info-det1.jpg?as=webp&width=960 960w"
+                            sizes="800px"
                         type="image/webp">
 
                     <!-- Fallback y tamaño por defecto -->
@@ -74,8 +76,7 @@
                         src="./images/Info-det1.jpg?width=960"
                         alt="Catedral de Santiago"
                         loading="lazy"
-                        decoding="async"
-                        sizes="(max-width: 640px) 100vw, 800px">
+                        decoding="async">
                 </picture>
 
                 <figcaption>
