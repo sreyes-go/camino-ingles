@@ -179,6 +179,100 @@ main .container {
   max-width: min(v.$max-width, 70ch);
 }
 
+:root {
+  --illustration-drawing-speed: 8s; /* ciclo completo */
+  --illustration-stagger: 0.18s;
+}
+
+#drawable-illustration.stamp-draw {
+  display: block;
+  color: v.$color-tertiary;
+}
+
+#drawable-illustration.stamp-draw :is(circle, path, rect) {
+  fill: transparent;
+  stroke: v.$color-tertiary;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* Animación infinita con pausas */
+  animation-name: draw-hold-reset;
+  animation-duration: var(--illustration-drawing-speed);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* 1) Aro exterior */
+#drawable-illustration.stamp-draw circle:nth-of-type(1) {
+  --dash-length: 327;
+  stroke-dasharray: 327;
+  stroke-dashoffset: 327;
+  animation-delay: 0s;
+}
+
+/* 2) Aro interior */
+#drawable-illustration.stamp-draw circle:nth-of-type(2) {
+  --dash-length: 289;
+  stroke-dasharray: 289;
+  stroke-dashoffset: 289;
+  animation-delay: calc(var(--illustration-stagger) * 1);
+}
+
+/* 3) Cuerpo maleta */
+#drawable-illustration.stamp-draw rect:nth-of-type(1) {
+  --dash-length: 200;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation-delay: calc(var(--illustration-stagger) * 2);
+}
+
+/* 4) Asa */
+#drawable-illustration.stamp-draw path:nth-of-type(1) {
+  --dash-length: 90;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation-delay: calc(var(--illustration-stagger) * 3);
+}
+
+/* 5) Línea central */
+#drawable-illustration.stamp-draw path:nth-of-type(2) {
+  --dash-length: 80;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation-delay: calc(var(--illustration-stagger) * 4);
+}
+
+/* 6) Etiqueta */
+#drawable-illustration.stamp-draw rect:nth-of-type(2) {
+  --dash-length: 60;
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation-delay: calc(var(--illustration-stagger) * 5);
+}
+
+@keyframes draw-hold-reset {
+  0% {
+    stroke-dashoffset: var(--dash-length);
+  }
+
+  35% {
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+  }
+
+  80% {
+    stroke-dashoffset: var(--dash-length);
+  }
+
+  100% {
+    stroke-dashoffset: var(--dash-length);
+  }
+}
+
 .arrow-clip {
   clip-path: url(#arrow-clip-path);
 }
@@ -221,6 +315,7 @@ img.arrow-clip {
   margin-bottom: v.$spacing-unit;
   display: grid;
   justify-items: center;
+  padding-bottom: 1rem;
 }
 .features-header h2 {
   color: v.$color-tertiary;
