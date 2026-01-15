@@ -1,70 +1,29 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init({
-  duration: 1500,
-  once: true      
-});
-
-import Typed from "typed.js";
-
+// 1) Typed.js
 const heroTitle = document.querySelector("#hero-title");
 if (heroTitle) {
-  new Typed(heroTitle, {
-    strings: ["Aquí comienza tu camino"],
-    typeSpeed: 80,
-    loop: false,
-    showCursor: false
-  });
+  import("./js/hero-typed.js")
+    .then(({ initTyped }) => {
+      initTyped(heroTitle);
+    })
+    .catch((err) => console.error("Error cargando hero-typed:", err));
 }
 
+// 2) Carrusel
+const featuresList = document.getElementById("features-list");
+if (featuresList) {
+  import("./js/features-carousel.js")
+    .then(({ initCarousel }) => {
+      initCarousel();
+    })
+    .catch((err) => console.error("Error cargando features-carousel:", err));
+}
 
-// Carrusel "features": desplazamiento con flechas 
-(function () {
-  'use strict';
-
-  const list = document.getElementById('features-list');
-  const prev = document.querySelector('.carousel-prev');
-  const next = document.querySelector('.carousel-next');
-
-  if (!list || !prev || !next) return;
-
-  function getStep() {
-    const firstCard = list.querySelector('.feature-card');
-    if (!firstCard) return 0;
-
-    const styles = window.getComputedStyle(list);
-    const gap = parseFloat(styles.gap || styles.columnGap || 0);
-    const width = firstCard.getBoundingClientRect().width;
-
-    return width + gap;
-  }
-
-  // Desplaza "card" a izquierda/derecha
-  function scrollByStep(direction) {
-    const step = getStep() || 300;
-    list.scrollBy({ left: direction * step, behavior: 'smooth' });
-  }
-
-  // Habilita/deshabilita flechas según posición
-  function updateButtons() {
-    const maxScroll = list.scrollWidth - list.clientWidth;
-    const atStart = list.scrollLeft <= 1;
-    const atEnd = list.scrollLeft >= (maxScroll - 1);
-    prev.disabled = atStart;
-    next.disabled = atEnd;
-  }
-
-  // Eventos
-  prev.addEventListener('click', () => scrollByStep(-1));
-  next.addEventListener('click', () => scrollByStep(1));
-  list.addEventListener('scroll', updateButtons, { passive: true });
-  window.addEventListener('resize', updateButtons);
-
-  // Init
-  function init() { updateButtons(); }
-  // Llamadas múltiples para cubrir cambios de layout/carga de fuentes
-  init();
-  requestAnimationFrame(init);
-  setTimeout(init, 150);
-})();
+// 3) AOS
+const hasAOS = document.querySelector("[data-aos]");
+if (hasAOS) {
+  import("./js/aos-init.js")
+    .then(({ initAOS }) => {
+      initAOS();
+    })
+    .catch((err) => console.error("Error cargando aos-init:", err));
+}
