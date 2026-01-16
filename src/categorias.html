@@ -15,7 +15,15 @@
         <div class="header-gradient">
             <div class="container">
             <a class="site-name" href="./index.html" aria-label="Inicio">
-                <img src="./images/logo-text.png" height="52" alt="Logotipo del sitio: concha amarilla">
+               <img
+                src="./images/logo-text.png?as=webp&width=368"
+                srcset="
+                  ./images/logo-text.png?as=webp&width=368 1x,
+                  ./images/logo-text.png?as=webp&width=736 2x
+                "
+                width="368"
+                height="52"
+                alt="Logotipo del sitio: concha amarilla">
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-list">
@@ -35,14 +43,18 @@
         <section class="hero-categories" aria-label="Portada de categorías">
             <figure class="hero-media">
                 <img
-                  srcset="
-                    ./images/hero-cat.jpg?as=webp&width=480 480w,
-                    ./images/hero-cat.jpg?as=webp&width=960 960w,
-                    ./images/hero-cat.jpg?as=webp&width=1440 1440w
-                  "
-                  sizes="100vw"
-                  src="./images/hero-cat.jpg?width=960"
-                  alt="Ribera del río Eume, en la etapa entre Pontedeume y Betanzos del Camino Inglés">
+                srcset="
+                  ./images/hero-cat.jpg?as=webp&width=480 480w,
+                  ./images/hero-cat.jpg?as=webp&width=960 960w,
+                  ./images/hero-cat.jpg?as=webp&width=1440 1440w
+                "
+                sizes="100vw"
+                src="./images/hero-cat.jpg?as=webp&width=960"
+                alt="Ribera del río Eume, en la etapa entre Pontedeume y Betanzos del Camino Inglés"
+                width="1440"
+                height="480"
+                decoding="async"
+                fetchpriority="high">
                 <figcaption class="hero-caption">
                     <h2 data-aos="zoom-in-down">TODO LO QUE NECESITAS PARA TU VIAJE</h2>
                 </figcaption>
@@ -65,7 +77,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/Info-cat.jpg?width=768"
-                            alt="Vista de la Catedral de Santiago desde una escalinata">
+                            alt="Vista de la Catedral de Santiago desde una escalinata"
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>
                         <div class="category-body">
                             <header class="category-header">
@@ -93,7 +109,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/Etapas-cat.jpg?width=768"
-                            alt="Señalización del Camino, dirección y km restantes.">
+                            alt="Señalización del Camino, dirección y km restantes."
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>
                         <div class="category-body">
                             <header class="category-header">
@@ -121,7 +141,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/Hostel-cat.jpg?width=768"
-                            alt="Albergue para peregrinos con literas y mochilas">
+                            alt="Albergue para peregrinos con literas y mochilas"
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>  
                         <div class="category-body">
                             <header class="category-header">
@@ -149,7 +173,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/Gastronomia-cat.jpg?width=768"
-                            alt="Plato de pulpo a la gallega con pimentón">
+                            alt="Plato de pulpo a la gallega con pimentón"
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>
                         <div class="category-body">
                             <header class="category-header">
@@ -177,7 +205,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/No-te-puedes-perder-cat.jpg?width=768"
-                            alt="Puente medieval y paisaje verde del Camino Inglés">
+                            alt="Puente medieval y paisaje verde del Camino Inglés"
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>
                         <div class="category-body">
                             <header class="category-header">
@@ -205,7 +237,11 @@
                             "
                             sizes="(max-width: 640px) 100vw, 50vw"
                             src="./images/Consejos-cat.jpg?width=768"
-                            alt="Mochila, botas y bastones listos para iniciar la etapa">
+                            alt="Mochila, botas y bastones listos para iniciar la etapa"
+                            width="768"
+                            height="576"
+                            loading="lazy"
+                            decoding="async">
                         </figure>
                         <div class="category-body">
                             <header class="category-header">
@@ -230,7 +266,15 @@
     <div class="container">
       <div class="footer-left">
         <a class="home-link" href="./index.html" aria-label="Volver al inicio">
-          <img src="./images/footer-logo.png" width="40" height="40" alt="Logotipo del sitio">
+          <img
+          src="./images/footer-logo.png?as=webp&width=40"
+          srcset="
+            ./images/footer-logo.png?as=webp&width=40 1x,
+            ./images/footer-logo.png?as=webp&width=80 2x
+          "
+          width="40"
+          height="40"
+          alt="Logotipo del sitio">
         </a>
       </div>
 
@@ -246,17 +290,41 @@
         <ul class="social-list">
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/facebook-logo.png" width="24" height="24" alt="Facebook">
+              <img 
+              src="./images/facebook-logo.png?as=webp&width=24" 
+              srcset="
+                ./images/facebook-logo.png?as=webp&width=24 1x,
+                ./images/facebook-logo.png?as=webp&width=48 2x
+                "
+              width="24" 
+              height="24" 
+              alt="Facebook">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/instagram-logo.png" width="24" height="24" alt="Instagram">
+              <img
+              src="./images/instagram-logo.png?as=webp&width=24"
+              srcset="
+                ./images/instagram-logo.png?as=webp&width=24 1x,
+                ./images/instagram-logo.png?as=webp&width=48 2x
+              "
+              width="24"
+              height="24"
+              alt="Instagram">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/tiktok_logo.png" width="24" height="24" alt="TikTok">
+              <img 
+              src="./images/tiktok_logo.png?as=webp&width=24" 
+              srcset="
+                ./images/tiktok_logo.png?as=webp&width=24 1x,
+                ./images/tiktok_logo.png?as=webp&width=48 2x
+              "
+              width="24" 
+              height="24" 
+              alt="TikTok">
             </a>
           </li>
         </ul>
