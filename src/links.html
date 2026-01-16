@@ -15,7 +15,16 @@
         <div class="header-gradient">
             <div class="container">
             <a class="site-name" href="./index.html" aria-label="Inicio">
-                <img src="./images/logo-text.png" height="52" alt="Logotipo del sitio: concha amarilla">
+                <img
+                src="./images/logo-text.png?as=webp&width=368"
+                srcset="
+                    ./images/logo-text.png?as=webp&width=368 1x,
+                    ./images/logo-text.png?as=webp&width=736 2x
+                "
+                width="368"
+                height="52"
+                alt="Logotipo del sitio: concha amarilla"
+                decoding="async">
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-list">
@@ -31,20 +40,23 @@
         </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
      <!-- 1) HERO full-bleed -->
         <section class="hero-categories" aria-label="Portada de links">
             <figure class="hero-media">
                 <img
-                src="./images/hero-link.png?as=webp&width=1440"
+                src="./images/hero-link.png?as=webp&width=1280"
                 srcset="
                     ./images/hero-link.png?as=webp&width=768   768w,
                     ./images/hero-link.png?as=webp&width=1280 1280w,
-                    ./images/hero-link.png?as=webp&width=1920 1920w "
+                    ./images/hero-link.png?as=webp&width=1920 1920w
+                "
                 sizes="100vw"
                 alt="Vista de la Iglesia de San Francisco | Betanzos"
-                loading="lazy"
-                decoding="async">
+                width="1920"
+                height="650"
+                decoding="async"
+                fetchpriority="high">
                 <figcaption class="hero-caption">
                 <h2 data-aos="fade-right">TRAS LA HUELLA DEL PEREGRINO</h2>
                 </figcaption>
@@ -100,6 +112,8 @@
                             srcset="
                             ./images/torre-hercules.jpg?as=webp&width=320 1x,
                             ./images/torre-hercules.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Torre de Hércules al atardecer, A Coruña"
                             loading="lazy"
                             decoding="async">
@@ -115,6 +129,8 @@
                             srcset="
                             ./images/Info-cat.jpg?as=webp&width=320 1x,
                             ./images/Info-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Vista de la Catedral de Santiago desde una escalinata"
                             loading="lazy"
                             decoding="async">
@@ -130,6 +146,8 @@
                             srcset="
                             ./images/Etapas-cat.jpg?as=webp&width=320 1x,
                             ./images/Etapas-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Señal que indica el Km 103 del Camino Inglés a Santiago"
                             loading="lazy"
                             decoding="async">
@@ -145,6 +163,8 @@
                             srcset="
                             ./images/Hostel-cat.jpg?as=webp&width=320 1x,
                             ./images/Hostel-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Casas de un pueblo del Camino de Santiago al anochecer"
                             loading="lazy"
                             decoding="async">
@@ -160,6 +180,8 @@
                             srcset="
                             ./images/Gastronomia-cat.jpg?as=webp&width=320 1x,
                             ./images/Gastronomia-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Detalle de plato de pulpo a feira"
                             loading="lazy"
                             decoding="async">
@@ -175,6 +197,8 @@
                             srcset="
                             ./images/No-te-puedes-perder-cat.jpg?as=webp&width=320 1x,
                             ./images/No-te-puedes-perder-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Vista de la Iglesia de San Francisco de Betanzos ubicada en Galicia, España"
                             loading="lazy"
                             decoding="async">
@@ -190,6 +214,8 @@
                             srcset="
                             ./images/Consejos-cat.jpg?as=webp&width=320 1x,
                             ./images/Consejos-cat.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Detalle de calzado de un peregrino caminando" 
                             loading="lazy" 
                             decoding="async">
@@ -205,6 +231,8 @@
                             srcset="
                             ./images/bosque-encantado-det1.jpg?as=webp&width=320 1x,
                             ./images/bosque-encantado-det1.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Bosque Encantado en Sigüeiro"
                             loading="lazy"
                             decoding="async">
@@ -220,6 +248,8 @@
                             srcset="
                             ./images/campanario-det1.jpg?as=webp&width=320 1x,
                             ./images/campanario-det1.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Campanario de la Iglesia de Santo André, Cabanas | Etapa de Neda a Pontedeume"
                             loading="lazy"
                             decoding="async">
@@ -235,6 +265,8 @@
                             srcset="
                             ./images/recorrido-camino-ingles-det2.jpg?as=webp&width=320 1x,
                             ./images/recorrido-camino-ingles-det2.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Perfil del recorrido del Camino de Santiago Inglés"
                             loading="lazy"
                             decoding="async">
@@ -250,6 +282,8 @@
                             srcset="
                             ./images/senal-det2.jpg?as=webp&width=320 1x,
                             ./images/senal-det2.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Concha de Santiago tallada en piedra"
                             loading="lazy"
                             decoding="async">
@@ -265,6 +299,8 @@
                             srcset="
                             ./images/betanzos-link.jpg?as=webp&width=320 1x,
                             ./images/betanzos-link.jpg?as=webp&width=640 2x"
+                            width="320"
+                            height="240"
                             alt="Iglesia de San Francisco en Betanzos"
                             loading="lazy"
                             decoding="async">
@@ -289,6 +325,9 @@
                 <figure class="video-item">
                     <iframe class="video"
                         src="https://www.youtube.com/embed/UXinUA-LJp0?si=l4z8hXRMNMMMVY0t"
+                        width="560"
+                        height="315"
+                        loading="lazy"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
@@ -298,6 +337,9 @@
                 <figure class="video-item">
                     <iframe class="video"
                         src="https://www.youtube.com/embed/M3wF44lZHgo?si=20wgE0jLgctsaBYh"
+                        width="560"
+                        height="315"
+                        loading="lazy"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
@@ -310,11 +352,20 @@
         </div> 
   </main>
 
+  <!-- Pie de página -->
   <footer class="footer">
     <div class="container">
       <div class="footer-left">
         <a class="home-link" href="./index.html" aria-label="Volver al inicio">
-          <img src="./images/footer-logo.png" width="40" height="40" alt="Logotipo del sitio">
+          <img
+          src="./images/footer-logo.png?as=webp&width=40"
+          srcset="
+            ./images/footer-logo.png?as=webp&width=40 1x,
+            ./images/footer-logo.png?as=webp&width=80 2x
+          "
+          width="40"
+          height="40"
+          alt="Logotipo del sitio">
         </a>
       </div>
 
@@ -330,17 +381,41 @@
         <ul class="social-list">
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/facebook-logo.png" width="24" height="24" alt="Facebook">
+              <img 
+              src="./images/facebook-logo.png?as=webp&width=24" 
+              srcset="
+                ./images/facebook-logo.png?as=webp&width=24 1x,
+                ./images/facebook-logo.png?as=webp&width=48 2x
+                "
+              width="24" 
+              height="24" 
+              alt="Facebook">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/instagram-logo.png" width="24" height="24" alt="Instagram">
+              <img
+              src="./images/instagram-logo.png?as=webp&width=24"
+              srcset="
+                ./images/instagram-logo.png?as=webp&width=24 1x,
+                ./images/instagram-logo.png?as=webp&width=48 2x
+              "
+              width="24"
+              height="24"
+              alt="Instagram">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/tiktok_logo.png" width="24" height="24" alt="TikTok">
+              <img 
+              src="./images/tiktok_logo.png?as=webp&width=24" 
+              srcset="
+                ./images/tiktok_logo.png?as=webp&width=24 1x,
+                ./images/tiktok_logo.png?as=webp&width=48 2x
+              "
+              width="24" 
+              height="24" 
+              alt="TikTok">
             </a>
           </li>
         </ul>
