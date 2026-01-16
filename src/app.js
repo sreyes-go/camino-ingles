@@ -27,3 +27,8 @@ if (hasAOS) {
     })
     .catch((err) => console.error("Error cargando aos-init:", err));
 }
+
+// 4) Iframe-lazy
+if (document.querySelector('iframe[data-src]')) {
+  import('./js/iframe-lazy.js');
+}
