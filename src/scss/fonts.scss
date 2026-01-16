@@ -1,10 +1,11 @@
 /* ==============================
-   Fuente local: Source Sans Pro (.otf)
+   Fuente local: Source Sans Pro (.woff2 + .ttf)
    ============================== */
-
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('../fonts/SourceSansPro-Regular.otf') format('opentype');
+  src:
+    url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +13,9 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('../fonts/SourceSansPro-It.otf') format('opentype');
+  src:
+    url('../fonts/SourceSansPro-It.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-It.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -20,7 +23,9 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('../fonts/SourceSansPro-Bold.otf') format('opentype');
+  src:
+    url('../fonts/SourceSansPro-Semibold.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Semibold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
