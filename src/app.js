@@ -29,6 +29,8 @@ if (hasAOS) {
 }
 
 // 4) Iframe-lazy
-if (document.querySelector('iframe[data-src]')) {
-  import('./js/iframe-lazy.js');
+const hasLazyIframe = document.querySelector("iframe[data-src]");
+if (hasLazyIframe) {
+  import("./js/iframe-lazy.js")
+    .catch((err) => console.error("Error cargando iframe-lazy:", err));
 }
