@@ -16,7 +16,16 @@
         <div class="header-gradient">
             <div class="container">
             <a class="site-name" href="./index.html" aria-label="Inicio">
-                <img src="./images/logo-text.png" height="52" alt="Logotipo del sitio: concha amarilla">
+                <img
+                src="./images/logo-text.png?as=webp&width=368"
+                srcset="
+                    ./images/logo-text.png?as=webp&width=368 1x,
+                    ./images/logo-text.png?as=webp&width=736 2x
+                "
+                width="368"
+                height="52"
+                alt="Logotipo del sitio: concha amarilla"
+                decoding="async">
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-list">
@@ -51,7 +60,7 @@
                 </div>
             </header>
 
-            <figure>
+            <figure class="article-cover">
                 <picture>
                     <!-- Versión móvil: recorte vertical -->
                     <source
@@ -73,9 +82,12 @@
 
                     <!-- Fallback y tamaño por defecto -->
                     <img
-                        src="./images/Info-det1.jpg?width=960"
+                        src="./images/Info-det1.jpg?as=webp&width=960"
+                        width="960"
+                        height="576"
                         alt="Catedral de Santiago"
-                        loading="lazy"
+                        loading="eager"
+                        fetchpriority="high"
                         decoding="async">
                 </picture>
 
@@ -127,6 +139,8 @@
                 "
                 sizes="(max-width: 640px) 100vw, 800px"
                 src="./images/campanario-det1.jpg?as=webp&width=960"
+                width="960"
+                height="575"
                 alt="Campanario de la Iglesia de Santo André, Cabanas"
                 loading="lazy"
                 decoding="async">
@@ -156,6 +170,8 @@
                 "
                 sizes="(max-width: 640px) 100vw, 800px"
                 src="./images/bosque-encantado-det1.jpg?as=webp&width=960"
+                width="960"
+                height="575"
                 alt="Bosque Encantado, Sigüeiro"
                 loading="lazy"
                 decoding="async">
@@ -185,7 +201,10 @@
 
             <figure class="video">
                 <iframe
-                    src="https://www.youtube.com/embed/UXinUA-LJp0?si=l4z8hXRMNMMMVY0t"
+                    data-src="https://www.youtube.com/embed/UXinUA-LJp0?si=l4z8hXRMNMMMVY0t"
+                    width="560"
+                    height="315"
+                    loading="lazy"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -200,7 +219,14 @@
             </p>
 
             <footer id="author">
-                <img src="./images/me.jpg" class="rounded" alt="Retrato de Sara Reyes">
+                <img
+                src="./images/me.jpg"
+                class="rounded"
+                width="120"
+                height="120"
+                alt="Retrato de Sara Reyes"
+                loading="lazy"
+                decoding="async">
                 <div class="footer-info">
                     <p><strong>SARA REYES</strong></p>
                     <p>
@@ -217,18 +243,26 @@
         </div>
   </main>
 
+  <!-- Pie de página -->
   <footer class="footer">
     <div class="container">
       <div class="footer-left">
         <a class="home-link" href="./index.html" aria-label="Volver al inicio">
-          <img src="./images/footer-logo.png" width="40" height="40" alt="Logotipo del sitio">
+          <img
+          src="./images/footer-logo.png?as=webp&width=40"
+          srcset="
+            ./images/footer-logo.png?as=webp&width=40 1x,
+            ./images/footer-logo.png?as=webp&width=80 2x
+          "
+          width="40"
+          height="40"
+          alt="Logotipo del sitio">
         </a>
       </div>
 
       <div class="footer-center">
         <p>
-          Sara Reyes Gómez &middot; Para la asignatura Herramientas 
-          <abbr title="HyperText Markup Language">HTML</abbr> y 
+          Sara Reyes Gómez &middot; Para la asignatura Herramientas <abbr title="HyperText Markup Language">HTML</abbr> y 
           <abbr title="Cascading Style Sheets">CSS</abbr> &middot;
           <abbr title="Universitat Oberta de Catalunya">UOC</abbr> 2025
         </p>
@@ -238,17 +272,41 @@
         <ul class="social-list">
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/facebook-logo.png" width="24" height="24" alt="Facebook">
+              <img 
+              src="./images/facebook-logo.png?as=webp&width=24" 
+              srcset="
+                ./images/facebook-logo.png?as=webp&width=24 1x,
+                ./images/facebook-logo.png?as=webp&width=48 2x
+                "
+              width="24" 
+              height="24" 
+              alt="Facebook">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/instagram-logo.png" width="24" height="24" alt="Instagram">
+              <img
+              src="./images/instagram-logo.png?as=webp&width=24"
+              srcset="
+                ./images/instagram-logo.png?as=webp&width=24 1x,
+                ./images/instagram-logo.png?as=webp&width=48 2x
+              "
+              width="24"
+              height="24"
+              alt="Instagram">
             </a>
           </li>
           <li>
             <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
-              <img src="./images/tiktok_logo.png" width="24" height="24" alt="TikTok">
+              <img 
+              src="./images/tiktok_logo.png?as=webp&width=24" 
+              srcset="
+                ./images/tiktok_logo.png?as=webp&width=24 1x,
+                ./images/tiktok_logo.png?as=webp&width=48 2x
+              "
+              width="24" 
+              height="24" 
+              alt="TikTok">
             </a>
           </li>
         </ul>
