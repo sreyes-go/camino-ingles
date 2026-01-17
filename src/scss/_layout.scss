@@ -1047,7 +1047,11 @@ figure.video iframe {
     justify-content: center;
   }
   .site-name img {
-    height: 40px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    display: block;
   }
   .nav-list {
     flex-direction: column;
